@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>SellBot Admin Panel</title>
+<title>SellBot Admin</title>
 <style>
-body{font-family:Arial;background:#0f172a;color:#fff;padding:20px}
-table{width:100%;border-collapse:collapse}
+body{background:#0f172a;color:white;font-family:Arial;padding:20px}
+table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #334155;padding:8px}
 th{background:#1e293b}
 </style>
@@ -13,21 +12,17 @@ th{background:#1e293b}
 <body>
 
 <h1>📊 SellBot Dashboard</h1>
-<p><b>Total Orders:</b> {{ orders }}</p>
-<p><b>Total Sales:</b> ₱{{ total }}</p>
+<p>Total Orders: {{ orders }}</p>
+<p>Total Sales: ₱{{ total }}</p>
 
-<h2>📦 Products</h2>
+<h2>Products</h2>
 <table>
-<tr>
-  <th>File</th>
-  <th>Price</th>
-  <th>Stock</th>
-</tr>
+<tr><th>File</th><th>Price</th><th>Stock</th></tr>
 {% for p in products %}
 <tr>
-  <td>{{ p[0] }}</td>
-  <td>₱{{ p[1] }}</td>
-  <td>{{ p[2] }}</td>
+<td>{{ p[0] }}</td>
+<td>₱{{ p[1] }}</td>
+<td>{{ p[2] }}</td>
 </tr>
 {% endfor %}
 </table>
