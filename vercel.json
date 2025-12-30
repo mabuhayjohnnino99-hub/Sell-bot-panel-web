@@ -1,6 +1,9 @@
 {
   "functions": {
-    "api/*.py": {
+    "api/index.py": {
+      "runtime": "vercel-python@0.7.0"
+    },
+    "api/login.py": {
       "runtime": "vercel-python@0.7.0"
     }
   },
@@ -9,5 +12,6 @@
     { "src": "/login", "dest": "/api/login.py" }
   ]
 }
+
 
 
